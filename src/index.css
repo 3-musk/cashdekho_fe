@@ -1,0 +1,483 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+
+  /* body */
+  --bg-color: #faedcd;
+  --nav-bg-color: #d4a373;
+  --bg-footer-color: #d4a373;
+  --login-signup-form-bg: #d4a373;
+  --txt-color: rgb(0, 0, 0);
+
+  /* svg colors */
+  --fill-color: #c4770a;
+  --stroke-color: #c4770a;
+}
+
+.p-datatable-thead{
+  border-bottom-width: 1px;
+}
+
+/* Body */
+
+html,
+body {
+  color: var(--txt-color);
+  height:100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+body{
+  background-color: var(--bg-color);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.password input{
+  padding: 5px 5px;
+  background-color: white;
+}
+
+.password path{
+  fill: black;
+}
+
+/* Navbar */
+
+.navtext{
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 130px;
+  /* or 108% */
+}
+
+.nav-css{
+  top:0;
+  color: var(--txt-color);
+  overflow: hidden;
+  background-color: var(--nav-bg-color);
+  z-index: 1000;
+  border-bottom: #171111 solid 1px;
+}
+
+#SvgjsG8514{
+  transition: 0.5s ease-in;
+}
+
+.hamburger{
+  height:40px;
+  width:40px;
+}
+
+.hline-1{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: 0.5s ease-in;
+}
+
+.hline-2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: 1s ease-in;
+}
+
+.hline-3{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: 0.5s ease-in;
+}
+
+.hamactive .hline-1{
+  border-color: black;
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.hamactive .hline-3{
+  border-color:black;
+  transform: rotate(45deg) translate(-9px, -6px);
+}
+
+.hamactive .hline-2 {
+  opacity:0;
+}
+
+
+.mobile_menu{
+  position:fixed;
+  background-color: #c2a257;
+  color:black;
+  height:100%;
+  width:100%;
+  top:-100%;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  padding-top: 150px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 0.5s ease-in;
+}
+
+.mobile_menu div{
+  padding-bottom: 30px;
+}
+
+.activated{
+  top:0;
+}
+
+/* Login */
+
+.login-signup-form{
+  background-color: var(--login-signup-form-bg);
+}
+
+/* Homepage */
+
+.headline{
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 120px;
+  line-height: 130px;
+
+  color: #FFFFFF;
+
+  background-color: rgba(237, 243, 194, 0.5);
+  
+}
+
+.headline2{
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 28px;
+  /* identical to box height */
+
+  color: #FFFFFF;
+
+}
+
+.menubutton{
+  
+  padding: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 190px;
+
+  border-width: 3px;
+  border-color: #CC9D2F;
+
+  font-family: 'Coustard';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 34px;
+
+  text-align: center;
+
+  color: #CC9D2F;
+
+}
+
+.homepage-bg-1{
+  background-image: url(../public/media/homepage_img_1.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.homepage-text-2{
+
+  
+
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 85px;
+
+  color: #FFFFFF;
+
+  backdrop-filter: blur(22px);
+
+}
+
+.homepage-text-3{
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 28px;
+  /* identical to box height */
+
+  color: #FFFFFF;
+
+}
+
+.homepage-text-4{
+  width: 80%;
+  font-family: 'Coustard';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 70px;
+  line-height: 98px;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  backdrop-filter: blur(22px);
+  /* Note: backdrop-filter has minimal browser support */
+
+}
+
+.homepage-footer{
+  background-color: var(--bg-footer-color);
+}
+
+/* Table styles */
+
+.p-datatable-wrapper{
+  background-color: var(--bg-color);
+  z-index: 999;
+}
+
+.p-datatable tr{
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  border-bottom: 1px solid black;
+}
+
+.p-datatable th{
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  border-bottom: 1px solid black;
+}
+
+.p-paginator .p-dropdown{
+  border: 2px solid black;
+}
+
+.p-paginator {
+  color: var(--txt-color);
+}
+
+.p-paginator .p-dropdown-label{
+  color: var(--txt-color);
+}
+
+.p-paginator-bottom{
+  background-color: var(--bg-color);
+  border: 2px solid black;
+  border-top: 0px;
+}
+
+.p-paginator .p-dropdown{
+  background-color: var(--bg-color);
+}
+
+.p-dropdown-trigger-icon{
+  color: black;
+}
+
+.p-datatable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.p-datatable tbody {
+  display: block;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.p-datatable tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.p-datatable-wrapper {
+  border: 2px solid black;
+}
+
+/* Application */
+
+.p-calendar .p-inputtext{
+  background-color: white;
+}
+
+.p-fieldset{
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  border: 1px solid black;
+}
+
+.p-fieldset-legend{
+  background-color: var(--nav-bg-color);
+  color: var(--txt-color);
+  padding: 10px 5px;
+  border: 2px solid black;
+  margin-left: 5px;
+}
+
+.p-toggleable-content{
+  width: 100%;
+}
+
+.p-fieldset-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.none{
+  display: none;
+}
+
+.p-fileupload-file-badge{
+  display: none;
+}
+
+@media only screen and (max-width: 1030px) {
+  
+  .homepage-bg-1{
+    background-size: auto 400px;
+    background-position: top right;
+  }
+
+  .homepage-text-2{
+
+  
+
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 85px;
+  
+    color: #FFFFFF;
+  
+    backdrop-filter: blur(22px);
+  
+  }
+
+  .homepage-text-4{
+    width: 80%;
+    font-family: 'Coustard';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 98px;
+    text-align: center;
+  
+    color: #FFFFFF;
+  
+    backdrop-filter: blur(22px);
+    /* Note: backdrop-filter has minimal browser support */
+  
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .headline{
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 60px;
+  
+    color: #FFFFFF;
+  }
+
+  .homepage-bg-1{
+    background-size: 300px 200px;
+    background-position: top right ;
+  }
+
+  .homepage-text-2{
+
+  
+
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+  
+    color: #FFFFFF;
+  
+    backdrop-filter: blur(22px);
+  
+  }
+
+  .homepage-text-4{
+    width: 80%;
+    font-family: 'Coustard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 36px;
+    text-align: center;
+  
+    color: #FFFFFF;
+  
+    backdrop-filter: blur(0px);
+    /* Note: backdrop-filter has minimal browser support */
+  
+  }
+
+}
+
+/* Menu */
+
+.ourmenu{
+  color: #CC9D2F;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.44px;
+  white-space:nowrap;
+}
+
+.menuheadline{
+  color: #FFF;
+  font-family: Coustard;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  white-space:nowrap;
+}
+
+.menutagline{
+  color: var(--Colour-100, #B8B8B8);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26.18px; /* 130.9% */
+  display: block;
+  margin-right: 30px;
+}

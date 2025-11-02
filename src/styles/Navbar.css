@@ -1,0 +1,150 @@
+:root {
+  --primary-green: #28511c;
+  --light-bg: #f2f1f1;
+}
+
+/* Navbar container */
+.navbar {
+  background-color: var(--primary-green);
+  color: var(--light-bg);
+  height: 70px;
+  width: 100%;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light-bg);
+  text-decoration: none;
+}
+
+/* Center links (desktop) */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  color: var(--light-bg);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #b2d8b0;
+}
+
+/* Auth links (right side desktop) */
+.auth-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.auth-links a,
+.auth-links button {
+  color: var(--light-bg);
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.auth-links a:hover,
+.auth-links button:hover {
+  color: #b2d8b0;
+}
+
+/* Hamburger (mobile) */
+.hamburger-wrapper {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger hr {
+  width: 25px;
+  height: 3px;
+  background-color: var(--light-bg);
+  border: none;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamactive .hline-1 {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamactive .hline-2 {
+  opacity: 0;
+}
+.hamactive .hline-3 {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: var(--primary-green);
+  color: var(--light-bg);
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.mobile-menu a {
+  padding: 10px 0;
+  text-decoration: none;
+  color: var(--light-bg);
+  display: block;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-links,
+  .auth-links {
+    display: none;
+  }
+
+  .hamburger-wrapper {
+    display: block;
+  }
+}
